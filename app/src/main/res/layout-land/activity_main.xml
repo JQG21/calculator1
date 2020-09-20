@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:inputType="text" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="6"
+        >
+        <Button
+            android:id="@+id/quit"
+            android:text="@string/out"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/del"
+            android:text="@string/del"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/pai"
+            android:text="@string/pai"
+            android:textSize="30sp"
+            />
+
+    </GridLayout>
+
+</LinearLayout>

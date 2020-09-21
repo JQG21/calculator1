@@ -21,26 +21,128 @@
         android:columnCount="4">
         <Button
             android:id="@+id/num7"
-            android:layout_row="0"
-            android:layout_column="0"
             android:text="@string/_7"
             android:textSize="30sp"
             />
         <Button
             android:id="@+id/num8"
-            android:layout_row="0"
-            android:layout_column="1"
             android:text="@string/_8"
             android:textSize="30sp"
             />
         <Button
             android:id="@+id/num9"
-            android:layout_row="0"
-            android:layout_column="2"
             android:text="@string/_9"
             android:textSize="30sp"
             />
-
+        <Button
+            android:id="@+id/del"
+            android:text="@string/delete"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/num4"
+            android:text="@string/_4"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/num5"
+            android:text="@string/_5"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/num6"
+            android:text="@string/_6"
+            android:textSize="30sp"
+            />
+        <!--!有问题-->
+        <Button
+            android:id="@+id/add"
+            android:text="@string/add"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/num1"
+            android:text="@string/_1"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/num2"
+            android:text="@string/_2"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/num3"
+            android:text="@string/_3"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/sub"
+            android:text="@string/sub"
+            android:textSize="30sp"
+            />
+        <!--有问题-->
+        <Button
+            android:id="@+id/percent"
+            android:text="@string/percent"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/num0"
+            android:text="@string/_0"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/point"
+            android:text="@string/point"
+            android:textSize="30sp"
+            />
+        <!--?-->
+        <Button
+            android:id="@+id/mul"
+            android:text="@string/mul"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/l_bracket"
+            android:text="@string/l_bracket"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/r_bracket"
+            android:text="@string/r_bracket"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/pai"
+            android:text="@string/pai"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/div"
+            android:text="@string/div"
+            android:textSize="30sp"
+            />
+        <!--?-->
+        <Button
+            android:id="@+id/quit"
+            android:text="@string/out"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/result"
+            android:text="@string/result"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/ac"
+            android:text="@string/ac"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/help"
+            android:text="@string/help"
+            android:textSize="30sp"
+            />
     </GridLayout>
 
 

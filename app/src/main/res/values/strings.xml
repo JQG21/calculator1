@@ -24,11 +24,29 @@
     <string name="div">/</string>
     <string name="result">=</string>
     <string name="ac">ac</string>
-    <string name="help">help</string>
+    <string name="help">帮助</string>
     <string name="factorial">x!</string>
     <string name="square">x2</string>
     <string name="sin">sin</string>
     <string name="cos">cos</string>
     <string name="tan">tan</string>
-    <string name="menu">menu</string>
+    <string name="menu">菜单</string>
+    <string name="hs">换算</string>
+    <string name="length">长度</string>
+    <string name="m">m</string>
+    <string name="dm">dm</string>
+    <string name="cm">cm</string>
+    <string name="mm">mm</string>
+    <string name="km">km</string>
+    <string name="volume">体积</string>
+    <string name="m3">m3</string>
+    <string name="dm3">dm3</string>
+    <string name="cm3">cm3</string>
+    <string name="mm3">mm3</string>
+    <string name="km3">km3</string>
+    <string name="scale">进制</string>
+    <string name="_10scale">10进制→</string>
+    <string name="_2scale">2进制→</string>
+    <string name="_8scale">8进制→</string>
+    <string name="_16scale">16进制→</string>
 </resources>

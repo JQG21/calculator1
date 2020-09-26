@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -307,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
             menu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    startActivity(new Intent(MainActivity.this,activity_2.class));
                 }
             });
         } else if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
@@ -344,5 +345,4 @@ public class MainActivity extends AppCompatActivity {
         double a = Double.parseDouble(string);
         return Math.pow(a,2);
     }
-
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activity_2">
 
@@ -15,21 +15,30 @@
         />
     <TextView
         android:id="@+id/length"
-        android:layout_width="match_parent"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/length"
         android:background="#7B68EE"
         />
     <EditText
         android:id="@+id/input1"
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/length"
         app:layout_constraintLeft_toLeftOf="parent"
         android:autofillHints=""
         android:inputType=""
         android:hint="@string/_0"
+        />
+    <Button
+        android:id="@+id/del1"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="@string/del"
+        app:layout_constraintTop_toBottomOf="@+id/length"
+        app:layout_constraintLeft_toRightOf="@+id/input1"
         />
     <Button
         android:id="@+id/km"
@@ -73,16 +82,17 @@
         />
     <EditText
         android:id="@+id/result1"
-        android:layout_width="match_parent"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/mm"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:autofillHints=""
         android:inputType=""
         android:hint="@string/_0"
         />
     <TextView
         android:id="@+id/volume"
-        android:layout_width="match_parent"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/result1"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -91,13 +101,21 @@
         />
     <EditText
         android:id="@+id/input2"
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/volume"
         app:layout_constraintLeft_toLeftOf="parent"
         android:autofillHints=""
         android:inputType=""
         android:hint="@string/_0"
+        />
+    <Button
+        android:id="@+id/del2"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="@string/del"
+        app:layout_constraintTop_toBottomOf="@+id/volume"
+        app:layout_constraintLeft_toRightOf="@+id/input2"
         />
     <Button
         android:id="@+id/km3"
@@ -141,28 +159,39 @@
         />
     <EditText
         android:id="@+id/result2"
-        android:layout_width="match_parent"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/mm3"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:autofillHints=""
         android:inputType=""
         android:hint="@string/_0"/>
     <TextView
         android:id="@+id/scale"
-        android:layout_width="match_parent"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/result2"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/scale"
         android:background="#7B68EE"
         />
     <EditText
         android:id="@+id/input3"
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/scale"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:autofillHints=""
         android:inputType=""
         android:hint="@string/_0"
+        />
+    <Button
+        android:id="@+id/del3"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="@string/del"
+        app:layout_constraintTop_toBottomOf="@+id/scale"
+        app:layout_constraintLeft_toRightOf="@+id/input3"
         />
     <Button
         android:id="@+id/ten_scale"
@@ -197,9 +226,11 @@
         android:text="@string/_16scale"
         />
     <EditText
-        android:layout_width="match_parent"
+        android:id="@+id/result3"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/ten_scale"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:autofillHints=""
         android:inputType=""
         android:hint="@string/_0"

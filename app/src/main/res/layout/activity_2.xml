@@ -33,10 +33,10 @@
         android:hint="@string/_0"
         />
     <Button
-        android:id="@+id/del1"
+        android:id="@+id/ac1"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:text="@string/del"
+        android:text="@string/ac"
         app:layout_constraintTop_toBottomOf="@+id/length"
         app:layout_constraintLeft_toRightOf="@+id/input1"
         />
@@ -110,10 +110,10 @@
         android:hint="@string/_0"
         />
     <Button
-        android:id="@+id/del2"
+        android:id="@+id/ac2"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:text="@string/del"
+        android:text="@string/ac"
         app:layout_constraintTop_toBottomOf="@+id/volume"
         app:layout_constraintLeft_toRightOf="@+id/input2"
         />
@@ -186,10 +186,10 @@
         android:hint="@string/_0"
         />
     <Button
-        android:id="@+id/del3"
+        android:id="@+id/ac3"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-        android:text="@string/del"
+        android:text="@string/ac"
         app:layout_constraintTop_toBottomOf="@+id/scale"
         app:layout_constraintLeft_toRightOf="@+id/input3"
         />
@@ -235,5 +235,14 @@
         android:inputType=""
         android:hint="@string/_0"
         />
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/result3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/back"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

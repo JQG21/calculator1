@@ -2,13 +2,15 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class activity_2 extends AppCompatActivity {
-    Button bt_km,bt_m,bt_dm,bt_cm,bt_mm,bt_km3,bt_m3,bt_dm3,bt_cm3,bt_mm3,bt_ten,bt_two,bt_eight,bt_f;
+    Button bt_km,bt_m,bt_dm,bt_cm,bt_mm,bt_km3,bt_m3,bt_dm3,bt_cm3,bt_mm3,bt_ten,bt_two
+            ,bt_eight,bt_f,ac1,ac2,ac3,back;
     EditText input1,input2,input3,result1,result2,result3;
 
 
@@ -39,6 +41,12 @@ public class activity_2 extends AppCompatActivity {
         result1 = findViewById(R.id.result1);
         result2 = findViewById(R.id.result2);
         result3 = findViewById(R.id.result3);
+
+        ac1 = findViewById(R.id.ac1);
+        ac2 = findViewById(R.id.ac2);
+        ac3 = findViewById(R.id.ac3);
+
+        back = findViewById(R.id.back);
 
         bt_km.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,8 +122,8 @@ public class activity_2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 string = input3.getText().toString();
-                string = "二进制："+ten_Sc(string,2)+"\n八进制："+ten_Sc(string,8)
-                        +"\n十进制:"+ten_Sc(string,16);
+                string = "1进制："+ten_Sc(string,2)+"\n8进制："+ten_Sc(string,8)
+                        +"\n16进制:"+ten_Sc(string,16);
                 result3.setText(string);
             }
         });
@@ -143,57 +151,83 @@ public class activity_2 extends AppCompatActivity {
                 result3.setText(string);
             }
         });
-
+        ac1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                input1.setText("");
+                result1.setText("");
+            }
+        });
+        ac2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                input2.setText("");
+                result2.setText("");
+            }
+        });
+        ac3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                input3.setText("");
+                result3.setText("");
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity_2.this,MainActivity.class));
+            }
+        });
 
     }
     public String km(String str){
         double r = Double.parseDouble(str);
-        string = r*1000+"m "+r*10000+"dm "+r*100000+"cm3 "+r*Math.pow(10,6)+"mm";
+        string = "="+r*1000+"m "+r*10000+"dm\n"+"="+r*100000+"cm3 ="+r*Math.pow(10,6)+"mm";
         return string;
     }
     public String m(String str){
         double r = Double.parseDouble(str);
-        string = r/1000+"km "+r*10+"dm "+r*100+"cm3 "+r*1000+"mm";
+        string = "="+r/1000+"km ="+r*10+"dm\n"+"="+r*100+"cm3 ="+r*1000+"mm";
         return string;
     }
     public String dm(String str){
         double r = Double.parseDouble(str);
-        string = r/10000+"km "+r/10+"m "+r*10+"cm "+r*100+"mm";
+        string = "="+r/10000+"km ="+r/10+"m\n"+"="+r*10+"cm ="+r*100+"mm";
         return string;
     }
     public String cm(String str){
         double r = Double.parseDouble(str);
-        string = r/100000+"km "+r/100+"m "+r/10+"dm "+r*10+"mm";
+        string = "="+r/100000+"km ="+r/100+"m\n="+r/10+"dm ="+r*10+"mm";
         return string;
     }
     public String mm(String str){
         double r = Double.parseDouble(str);
-        string = r/Math.pow(10,6)+"km "+r/1000+"m "+r/100+"dm "+r/10+"cm";
+        string = "="+r/Math.pow(10,6)+"km ="+r/1000+"m\n="+r/100+"dm ="+r/10+"cm";
         return string;
     }
     public String km3(String str){
         double r = Double.parseDouble(str);
-        string = r*Math.pow(10,9)+"m3 "+r*Math.pow(10,12)+"dm "+r*Math.pow(10,15)+"cm3 "+r*Math.pow(10,18)+"mm";
+        string = "="+r*Math.pow(10,9)+"m3 ="+r*Math.pow(10,12)+"dm3\n"+"="+r*Math.pow(10,15)+"cm3 ="+r*Math.pow(10,18)+"mm3";
         return string;
     }
     public String m3(String str){
         double r = Double.parseDouble(str);
-        string = r/Math.pow(10,9)+"km3 "+r*Math.pow(10,3)+"dm "+r*Math.pow(10,6)+"cm3 "+r*Math.pow(10,9)+"mm";
+        string = "="+r/Math.pow(10,9)+"km3 ="+r*Math.pow(10,3)+"dm\n"+"="+r*Math.pow(10,6)+"cm3 ="+r*Math.pow(10,9)+"mm";
         return string;
     }
     public String dm3(String str){
         double r = Double.parseDouble(str);
-        string = r/Math.pow(10,12)+"km3 "+r/Math.pow(10,3)+"m "+r*Math.pow(10,3)+"cm3 "+r*Math.pow(10,6)+"mm";
+        string = "="+r/Math.pow(10,12)+"km3 ="+r/Math.pow(10,3)+"m\n"+"="+r*Math.pow(10,3)+"cm3 ="+r*Math.pow(10,6)+"mm";
         return string;
     }
     public String cm3(String str){
         double r = Double.parseDouble(str);
-        string = r/Math.pow(10,15)+"km3 "+r/Math.pow(10,6)+"m "+r/Math.pow(10,3)+"dm3 "+r*Math.pow(10,9)+"mm";
+        string = "="+r/Math.pow(10,15)+"km3 ="+r/Math.pow(10,6)+"m\n"+"="+r/Math.pow(10,3)+"dm3 ="+r*Math.pow(10,9)+"mm";
         return string;
     }
     public String mm3(String str){
         double r = Double.parseDouble(str);
-        string = r/Math.pow(10,18)+"km3 "+r/Math.pow(10,9)+"m "+r/Math.pow(10,6)+"dm3 "+r/Math.pow(10,3)+"mm";
+        string = "="+r/Math.pow(10,18)+"km3 ="+r/Math.pow(10,9)+"m\n"+"="+r/Math.pow(10,6)+"dm3 ="+r/Math.pow(10,3)+"mm";
         return string;
     }
     public String ten_Sc(String str,int radix){

@@ -113,25 +113,34 @@ public class activity_2 extends AppCompatActivity {
         bt_ten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                string = input3.getText().toString();
+                string = "二进制："+ten_Sc(string,2)+"\n八进制："+ten_Sc(string,8)
+                        +"\n十进制:"+ten_Sc(string,16);
+                result3.setText(string);
             }
         });
         bt_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                string = input3.getText().toString();
+                string = two_sc(string);
+                result3.setText(string);
             }
         });
         bt_eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                string = input3.getText().toString();
+                string = eight_sc(string);
+                result3.setText(string);
             }
         });
         bt_f.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                string = input3.getText().toString();
+                string = f_sc(string);
+                result3.setText(string);
             }
         });
 
@@ -186,5 +195,30 @@ public class activity_2 extends AppCompatActivity {
         double r = Double.parseDouble(str);
         string = r/Math.pow(10,18)+"km3 "+r/Math.pow(10,9)+"m "+r/Math.pow(10,6)+"dm3 "+r/Math.pow(10,3)+"mm";
         return string;
+    }
+    public String ten_Sc(String str,int radix){
+        int num = Integer.parseInt(str);
+        if(radix == 2)
+            return Integer.toBinaryString(num);
+        else if(radix == 8)
+            return Integer.toOctalString(num);
+        else if(radix == 16)
+            return Integer.toHexString(num);
+        return null;
+    }
+    public String two_sc(String str){
+        int ten = Integer.parseInt(str,2); //2转10
+        String ten_str = ten + "";
+        return "10进制："+ten+"\n8进制："+ten_Sc(ten_str,8)+"\n16进制："+ten_Sc(ten_str,16);
+    }
+    public String eight_sc(String str){
+        int ten = Integer.parseInt(str,8); //2转10
+        String ten_str = ten + "";
+        return "10进制："+ten+"\n2进制："+ten_Sc(ten_str,2)+"\n16进制："+ten_Sc(ten_str,16);
+    }
+    public String f_sc(String str){
+        int ten = Integer.parseInt(str,16); //2转10
+        String ten_str = ten + "";
+        return "10进制："+ten+"\n2进制："+ten_Sc(ten_str,2)+"\n8进制："+ten_Sc(ten_str,8);
     }
     }

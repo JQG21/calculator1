@@ -225,19 +225,6 @@ public class MainActivity extends AppCompatActivity {
                 edit_box.setText(s);
             }
         });
-        help.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage("这是一个帮助").setTitle("");
-                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(MainActivity.this,"这是一个帮助",Toast.LENGTH_LONG).show();
-                    }
-                });
-            }
-        });
         ac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -250,6 +237,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 str.delete(str.length()-1,str.length());
                 edit_box.setText(str);
+            }
+        });
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,activity_2.class));
             }
         });
         quit.setOnClickListener(new View.OnClickListener() {
@@ -305,12 +298,20 @@ public class MainActivity extends AppCompatActivity {
                     edit_box.setText(s);
                 }
             });
-            menu.setOnClickListener(new View.OnClickListener() {
+            help.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(MainActivity.this,activity_2.class));
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setMessage("这是一个帮助").setTitle("");
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Toast.makeText(MainActivity.this,"这是一个帮助",Toast.LENGTH_LONG).show();
+                        }
+                    });
                 }
             });
+
         } else if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             Log.i("info","portrait"); // 竖屏
         }
